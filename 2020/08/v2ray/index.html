@@ -2,7 +2,8 @@
 <html lang="zh">
   <head>
     <title>
-        Lost Space - Hinux&#39;s Blog</title>
+        实战nginx转发v2ray流量 - Lost Space - Hinux&#39;s Blog
+      </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <meta name="viewport"
@@ -19,28 +20,35 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    
+    <meta name="description" content="說在前面 本文纯粹从技术角度出发，以学习nginx并进行相关实践为主要目的。 請勿將本技術用於違法目的！用本文提到的技術進行違法犯罪而造成的不良" />
     <meta name="generator" content="Hugo 0.57.2 with theme pure" />
-    <title>Lost Space - Hinux&#39;s Blog</title>
+    <title>实战nginx转发v2ray流量 - Lost Space - Hinux&#39;s Blog</title>
     
-    <link rel="alternate" type="application/rss+xml" href="https://i.hinwai.top/tags/about-me/index.xml" title="Lost Space - Hinux's Blog" />
     
     <link rel="stylesheet" href="https://i.hinwai.top/css/style.min.96344896368df9cb930b382c93ca5a7234d7118b7754e394f15c1e929cc37e10.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="about-me" />
-<meta property="og:description" content="" />
-<meta property="og:type" content="website" />
-<meta property="og:url" content="https://i.hinwai.top/tags/about-me/" />
+    <meta property="og:title" content="实战nginx转发v2ray流量" />
+<meta property="og:description" content="說在前面 本文纯粹从技术角度出发，以学习nginx并进行相关实践为主要目的。 請勿將本技術用於違法目的！用本文提到的技術進行違法犯罪而造成的不良" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://i.hinwai.top/2020/08/v2ray/" />
+<meta property="article:published_time" content="2020-08-27T09:33:06+08:00" />
+<meta property="article:modified_time" content="2020-08-27T09:33:06+08:00" />
+<meta itemprop="name" content="实战nginx转发v2ray流量">
+<meta itemprop="description" content="說在前面 本文纯粹从技术角度出发，以学习nginx并进行相关实践为主要目的。 請勿將本技術用於違法目的！用本文提到的技術進行違法犯罪而造成的不良">
 
-<meta property="og:updated_time" content="2020-08-23T17:17:11+08:00" />
-<meta itemprop="name" content="about-me">
-<meta itemprop="description" content="">
 
+<meta itemprop="datePublished" content="2020-08-27T09:33:06&#43;08:00" />
+<meta itemprop="dateModified" content="2020-08-27T09:33:06&#43;08:00" />
+<meta itemprop="wordCount" content="1548">
+
+
+
+<meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="about-me"/>
-<meta name="twitter:description" content=""/>
+<meta name="twitter:title" content="实战nginx转发v2ray流量"/>
+<meta name="twitter:description" content="說在前面 本文纯粹从技术角度出发，以学习nginx并进行相关实践为主要目的。 請勿將本技術用於違法目的！用本文提到的技術進行違法犯罪而造成的不良"/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -214,38 +222,203 @@
 
     
     
-<main class="main" role="main">
-    <article class="content article article-tags post-type-list" itemscope="">
-        <header class="article-header">
-            <h1 itemprop="name" class="hidden-xs">about-me</h1>
-            <p class="text-muted hidden-xs">共 2 个标签</p>
-            <nav role="navigation" id="nav-main" class="okayNav">
-                <ul>
-                    <li><a href="https://i.hinwai.top/tags">All</a></li>
-                    <li><a href="https://i.hinwai.top/tags/about-me/">about-me</a></li>
-                    <li><a href="https://i.hinwai.top/tags/%E5%90%B9%E6%B0%B4%E5%8F%B0/">吹水台</a></li>
-                </ul>
-            </nav>
-        </header>
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">文章目录</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2020/08/v2ray/"
+    >实战nginx转发v2ray流量</a
+  >
+</h1>
+
+      <div class="article-meta">
         
-        <div class="article-body">
-            <div class="col-md-6"><article class="panel panel-default hover-shadow hover-grow" itemscope itemtype="http://schema.org/BlogPosting">
-    <div class="panel-body">
-        <div class="article-meta">
-            <time datetime="2020-08-23 17:17:11 &#43;0800 CST"
-                itemprop="datePublished">2020-08-23</time>
-        </div>
-        <h3 class="article-title" itemprop="name">
-            <a class="article-link" href="https://i.hinwai.top/2020/08/my-first-blog/">My First Blog</a>
-        </h3>
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://i.hinwai.top/2020/08/v2ray/" class="article-date">
+  <time datetime="2020-08-27 09:33:06 &#43;0800 CST" itemprop="datePublished">2020-08-27</time>
+</a>
+</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/08/v2ray/#comments"
+            class="article-comment-link">评论</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1548字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 4分 </span>
+      </div>
     </div>
-    <div class="panel-footer">
-        <a href="https://i.hinwai.top/tags/about-me" class="label label-default mb">about-me</a>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      
+
+<h2 id="說在前面">說在前面</h2>
+
+<p>本文纯粹从技术角度出发，以学习nginx并进行相关实践为主要目的。</p>
+
+<h3 id="請勿將本技術用於違法目的-用本文提到的技術進行違法犯罪而造成的不良後果或法律責任均與本文作者無關">請勿將本技術用於違法目的！用本文提到的技術進行違法犯罪而造成的不良後果或法律責任均與本文作者無關。</h3>
+
+<h2 id="要準備的東西">要準備的東西</h2>
+
+<p><strong>PS：这只是我的配置：</strong><br />
+伺服器 搭载Ubuntu 18.04.05 LTS系统.<br />
+v2ray<br />
+nginx-1.14.0</p>
+
+<h2 id="v2ray">v2ray</h2>
+
+<p>v2ray是一款代理软件.支持VMess,Shadowsocks等代理协议.关于更多v2ray的信息可以去<a href="https://www.v2ray.com/">官网</a>了解.<br />
+想偷懒的话可以直接下载别人写好的懒人<a href="https://github.com/HinWaei/multi-v2ray">脚本</a>一键完成安装和配置.</p>
+
+<p>这里假设我们已经设置好了v2ray端口为10086,inbound为VMess协议,流量伪装方式为websocket,ws路径为/Abcde123/,关闭tls。<br />
+<strong>这里可以关掉tls，因为在nginx转发中就已经提供了tls功能。</strong></p>
+
+<h2 id="ssl證書的獲取">SSL證書的獲取</h2>
+
+<p>首先上<a href="https://hk.godaddy.com">GoDaddy</a>或者<a href="https://www.namesilo.com">Namesilo</a>买一个域名，这些网站上的域名一般都挺便宜的。<br />
+我选择了将这些域名托管在<a href="https://www.cloudflare.com">Cloudflare</a>上（要将域名提供商的NameServer改成Cloudflare的xx.ns.cloudflare.com）。<br />
+然后更改DNS record，添加指向服务器IP的A记录等。</p>
+
+<p><strong>这里假设域名为abc.top，下面将为其颁发证书</strong></p>
+
+<p>ssh连服务器，输入指令:</p>
+
+<pre><code class="language-sh">$   curl https://get.acme.sh | bash
+$   acme.sh --issue -d abc.top --standalone ;此时证书已经颁发完毕并保存在了~/.acme.sh/abc.top/目录下
+$   ... ;将证书复制保存到一个安全的地方就o啦
+</code></pre>
+
+<p>这里采用了&ndash;standalone模式来脱机验证域名的ownership,当然你也可以用dns或者webroot模式来验证.说实话我用webroot方式出错了好多次2333333，当时啥也不会，还以为是证书的问题，然后折磨王地generate了证书又删掉又gen了好多回，结果被<a href="https://letsencrypt.org">Let&rsquo;s Encrypt</a>（可以白嫖证书的良心CA）给限速了。</p>
+
+<p><strong>PS:standalone验证的时候要记得把nginx关掉（让80端口开放）</strong></p>
+
+<h2 id="關於nginx">關於Nginx</h2>
+
+<p><img src="/images/nginx.png" alt="nginx" /></p>
+
+<p>Nginx是一个<strong>免费、开源</strong>的异步框架网页服务器应用（u1s1 毛子开发的东西还挺管用，感兴趣的童鞋可以去了解一下<a href="http://sysoev.ru/en/">Igor Sysoev</a>这个人）。<br />
+Nginx可以用于<strong>反向代理</strong>(Reverse Proxy)，<strong>负载均衡</strong>(Load Balance)和HTTP缓存等目的。</p>
+
+<p>这里使用的主要是nginx的Reverse Proxy功能</p>
+
+<h4 id="安裝方式">安裝方式：</h4>
+
+<p>大佬说过：<strong><em>效率至上，既然有包管理器了那干嘛还要用源码编译呢?</em></strong><br />
+这里我就用最简单粗暴的方法:apt 😌</p>
+
+<pre><code class="language-sh">$   sudo apt-get install -y nginx
+</code></pre>
+
+<h3 id="配置文件">配置文件</h3>
+
+<p>根据<a href="https://www.nginx.com/resources/wiki/start/topics/tutorials/gettingstarted/?highlight=nginx%20conf#running-nginx">官方文档</a>中的说明，nginx的配置文件为nginx.conf<br />
+我修改的配置文件路径为/etc/nginx/sites-enable/default<br />
+因为这个文件最后都会被include到nginx.conf文件里头，所以可以直接修改这个default文件。</p>
+
+<p>下面是我的配置文件内容（和用Nginx配置HTTPS的配置文件内容大同小异）</p>
+
+<pre><code class="language-nginx.conf">server {
+        listen 443 ssl;
+        ssl on;
+        ssl_protocols TLSv1 TLSv1.1 TLSv1.2; #指定多个TLS版本以增加兼容性
+        ssl_certificate /path/to/your.website.cer;      #.cer文件是域名证书
+        ssl_certificate_key /path/to/your.website.key;  #.key文件是域名私钥
+        #用acme.sh申请证书的时候不需要像网上说的那样还要再--install-cert一次
+
+        location /your_ws_path/ {
+            proxy_pass http://127.0.0.1:10086/Abcde123/; #这里的ws路径可以理解成一个网站的uri
+            proxy_redirect off;
+            proxy_set_header Connection &quot;upgrade&quot;;
+            proxy_set_header Upgrade $http_upgrade;
+            proxy_set_header Host $http_host;
+            proxy_http_version 1.1;
+
+            #使得v2ray能将realip记录到access.log里
+            proxy_set_header X-Real-IP $remote_addr;
+            proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+        }
+}
+
+</code></pre>
+
+<p>然后直接启动nginx即可</p>
+
+<h3 id="客户端">客户端</h3>
+
+<p>客户端配置连接的时候需要将服务器端口改成443，并且将ws路径改成nginx的location块配置的路径名称（这里是your_ws_path）。</p>
+
+<h3 id="总结">总结</h3>
+
+<p>用nginx通过模拟HTTPS连接的方式对v2ray进行websocket流量转发能较好地伪装流量，并且还能在大多数情况下绕过运营商QoS，因此是一个不错的选择噢😉。</p>
+
     </div>
-</article>
-            </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接: </strong>
+      <a href="https://i.hinwai.top/2020/08/v2ray/" title="实战nginx转发v2ray流量" target="_blank" rel="external">https://i.hinwai.top/2020/08/v2ray/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/HinWaei" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://i.hinwai.top/avatar.jpeg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/HinWaei" target="_blank"><span class="text-dark">Hinux_Chau</span><small class="ml-1x">亂流下平安</small></a></h3>
+        <div>A Coder</div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+<section id="comments">
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://i.hinwai.top/2020/08/qixi/" title="七夕节"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
+            </li>
+            
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="文章目录" role="button">
+                    <span>[&nbsp;</span><span>文章目录</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
         </div>
-    </article>
+    </div>
+</nav>
+
 </main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 <ul class="social-links">
     <li><a href="https://github.com/HinWaei" target="_blank" title="github" data-toggle=tooltip data-placement=top >
@@ -322,6 +495,7 @@
         hasInnerContainers: true,
     });
 </script>
+
 
   </body>
 </html>
