@@ -5,10 +5,19 @@
     <link>https://hinwai.top/</link>
     <description>Recent content on Lost Space - Hinux&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 27 Aug 2020 12:37:59 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2020 21:03:41 +0800</lastBuildDate>
     
         <atom:link href="https://hinwai.top/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>一些工具</title>
+      <link>https://hinwai.top/2020/08/tools/</link>
+      <pubDate>Sun, 30 Aug 2020 21:03:41 +0800</pubDate>
+      
+      <guid>https://hinwai.top/2020/08/tools/</guid>
+      <description>PWN IDA: https://mega.nz/file/DldDUAzQ#ZItMbE8UzDxLP-F_7HXYnfeyK4ENb35OLI_4mPqhWIQ</description>
+    </item>
     
     <item>
       <title>OSI七层模型的一些个人理解</title>
