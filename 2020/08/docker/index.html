@@ -2,7 +2,7 @@
 <html lang="zh">
   <head>
     <title>
-        朋友仔 - Lost Space - Hinux&#39;s Blog
+        關於Docker的那些事 - Lost Space - Hinux&#39;s Blog
       </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -20,35 +20,35 @@
     <meta http-equiv="window-target" content="_top" />
     
     
-    <meta name="description" content="Hinux 嘅朋友仔們 左手的世界 Rise&amp;#39;s Blog 咸鱼白的窝 一些奇奇怪怪的东西 😐Geno1024 😐还没上线的Blog" />
+    <meta name="description" content="Docker是什麼 Docker中文翻译为&amp;rdquo;码头搬运工人&amp;rdquo;，是一个开源软件。 Docker容器与虚拟机类似，但二者在原理" />
     <meta name="generator" content="Hugo 0.57.2 with theme pure" />
-    <title>朋友仔 - Lost Space - Hinux&#39;s Blog</title>
+    <title>關於Docker的那些事 - Lost Space - Hinux&#39;s Blog</title>
     
     
     <link rel="stylesheet" href="https://hinwai.top/css/style.min.96344896368df9cb930b382c93ca5a7234d7118b7754e394f15c1e929cc37e10.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="朋友仔" />
-<meta property="og:description" content="Hinux 嘅朋友仔們 左手的世界 Rise&#39;s Blog 咸鱼白的窝 一些奇奇怪怪的东西 😐Geno1024 😐还没上线的Blog" />
+    <meta property="og:title" content="關於Docker的那些事" />
+<meta property="og:description" content="Docker是什麼 Docker中文翻译为&rdquo;码头搬运工人&rdquo;，是一个开源软件。 Docker容器与虚拟机类似，但二者在原理" />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://hinwai.top/friends/" />
-<meta property="article:published_time" content="2020-08-23T00:00:00+00:00" />
-<meta property="article:modified_time" content="2020-08-23T00:00:00+00:00" />
-<meta itemprop="name" content="朋友仔">
-<meta itemprop="description" content="Hinux 嘅朋友仔們 左手的世界 Rise&#39;s Blog 咸鱼白的窝 一些奇奇怪怪的东西 😐Geno1024 😐还没上线的Blog">
+<meta property="og:url" content="https://hinwai.top/2020/08/docker/" />
+<meta property="article:published_time" content="2020-08-31T23:26:21+08:00" />
+<meta property="article:modified_time" content="2020-08-31T23:26:21+08:00" />
+<meta itemprop="name" content="關於Docker的那些事">
+<meta itemprop="description" content="Docker是什麼 Docker中文翻译为&rdquo;码头搬运工人&rdquo;，是一个开源软件。 Docker容器与虚拟机类似，但二者在原理">
 
 
-<meta itemprop="datePublished" content="2020-08-23T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2020-08-23T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="46">
+<meta itemprop="datePublished" content="2020-08-31T23:26:21&#43;08:00" />
+<meta itemprop="dateModified" content="2020-08-31T23:26:21&#43;08:00" />
+<meta itemprop="wordCount" content="416">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="朋友仔"/>
-<meta name="twitter:description" content="Hinux 嘅朋友仔們 左手的世界 Rise&#39;s Blog 咸鱼白的窝 一些奇奇怪怪的东西 😐Geno1024 😐还没上线的Blog"/>
+<meta name="twitter:title" content="關於Docker的那些事"/>
+<meta name="twitter:description" content="Docker是什麼 Docker中文翻译为&rdquo;码头搬运工人&rdquo;，是一个开源软件。 Docker容器与虚拟机类似，但二者在原理"/>
 
     <!--[if lte IE 9]>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/classlist/1.1.20170427/classList.min.js"></script>
@@ -191,6 +191,16 @@
             <li>
                 <div class="item-inner">
                     <p class="item-title">
+                        <a href="https://hinwai.top/2020/08/docker/" class="title">關於Docker的那些事</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2020-08-31 23:26:21 &#43;0800 CST" itemprop="datePublished">2020-08-31</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
                         <a href="https://hinwai.top/2020/08/tools/" class="title">一些工具</a>
                     </p>
                     <p class="item-date">
@@ -228,16 +238,6 @@
                     </p>
                 </div>
             </li>
-            <li>
-                <div class="item-inner">
-                    <p class="item-title">
-                        <a href="https://hinwai.top/2020/08/my-first-blog/" class="title">My First Blog</a>
-                    </p>
-                    <p class="item-date">
-                        <time datetime="2020-08-23 17:17:11 &#43;0800 CST" itemprop="datePublished">2020-08-23</time>
-                    </p>
-                </div>
-            </li>
         </ul>
     </div>
 </div>
@@ -246,127 +246,128 @@
 
     
     
-<main class="main" role="main">
-    <style type="text/css">
-        .myfriends {
-            text-align: center;
-            background-color: #fff;
-            opacity: 0.9;
-            display: flex;
-            flex-direction: column;
-            width: 100%;
-        }
+<aside class="sidebar sidebar-toc collapse" id="collapseToc" itemscope itemtype="http://schema.org/WPSideBar">
+  <div class="slimContent">
+    <h4 class="toc-title">文章目录</h4>
+    <nav id="toc" class="js-toc toc">
+
+    </nav>
+  </div>
+</aside>
+<main class="main" role="main"><div class="content">
+  <article id="-" class="article article-type-" itemscope
+    itemtype="http://schema.org/BlogPosting">
+    
+    <div class="article-header">
+      <h1 itemprop="name">
+  <a
+    class="article-title"
+    href="/2020/08/docker/"
+    >關於Docker的那些事</a
+  >
+</h1>
+
+      <div class="article-meta">
         
-        .myfriends a {
-            color: black;
-        }
-        
-        .myfriends p {
-            display: none;
-        }
-        
-        .friendurl {
-            text-decoration: none !important;
-            color: black;
-        }
-        
-        .myfriend {
-            width: 56px !important;
-            height: 56px !important;
-            border-radius: 50%;
-            border: 1px solid #ddd;
-            padding: 2px;
-            box-shadow: 1px 1px 1px rgba(0,0,0, .15);
-            margin-top: 14px !important;
-            margin-left: 14px !important;
-            background-color: #fff;
-        }
-        
-        .frienddiv {
-            height: 92px;
-            margin-top: 10px;
-            width: 48%;
-            display: inline-block !important;
-        }
-        
-        .frienddiv:hover {
-            background: rgba(0, 86, 246, 0.322);
-        }
-        
-        .frienddiv:hover .frienddivleft img {
-            transition: .9s!important;
-            -webkit-transition: .9s!important;
-            -moz-transition: .9s!important;
-            -o-transition: .9s!important;
-            -ms-transition: .9s!important;
-            transform: rotate(360deg)!important;
-            -webkit-transform: rotate(360deg)!important;
-            -moz-transform: rotate(360deg)!important;
-            -o-transform: rotate(360deg)!important;
-            -ms-transform: rotate(360deg)!important;
-        }
-        
-        .frienddivleft {
-            width: 92px;
-            float: left;
-        }
-        
-        .frienddivleft {
-            margin-right: 2px;
-        }
-        
-        .frienddivright {
-            margin-top: 18px;
-            margin-right: 18px;
-            text-overflow: ellipsis;
-            overflow: visible;
-            white-space: nowrap;
-        }
-        </style>
-        <div class="myfriends">
+<span class="article-date">
+  <i class="icon icon-calendar-check"></i>&nbsp;
+<a href="https://hinwai.top/2020/08/docker/" class="article-date">
+  <time datetime="2020-08-31 23:26:21 &#43;0800 CST" itemprop="datePublished">2020-08-31</time>
+</a>
+</span>
+
+
+        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/08/docker/#comments"
+            class="article-comment-link">评论</a></span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 416字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1分 </span>
+      </div>
+    </div>
+    <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
+      
+
+<h2 id="docker是什麼">Docker是什麼</h2>
+
+<p>Docker中文翻译为&rdquo;码头搬运工人&rdquo;，是一个开源软件。
+Docker容器与虚拟机类似，但二者在原理上不同。容器是OS-level virtualization，而虚拟机则是将硬件虚拟化，因此容器更被视为软件的一个标准化单元（个人理解就相当于一个小胶囊，里面裹着一个软件所需要的环境。这个小胶囊可以不依赖外部环境独立运行，从而避免产生一些奇奇怪怪的库问题。）</p>
+
+<p><img src="https://www.docker.com/sites/default/files/Whale%20Logo332%402x_5.png" alt="Docker" /></p>
+
+<h2 id="國內docker鏡像加速站">國內Docker鏡像加速站</h2>
+
+<p><strong>天朝自有国情在</strong><br />
+在国内使用官方提供的mirror会经常出现掉线等情况。<br />
+这里列举了一些国内的docker镜像站：</p>
+
+<p>Docker国内官方镜像:<a href="https://registry.docker-cn.com">https://registry.docker-cn.com</a></p>
+
+<p>网易:<a href="http://hub-mirror.c.163.com">http://hub-mirror.c.163.com</a></p>
+
+<p>阿里云:<a href="https://3laho3y3.mirror.aliyuncs.com">https://3laho3y3.mirror.aliyuncs.com</a></p>
+
+<p>DaoCloud:<a href="http://f1361db2.m.daocloud.io">http://f1361db2.m.daocloud.io</a></p>
+
+<p>腾讯云:<a href="https://mirror.ccs.tencentyun.com">https://mirror.ccs.tencentyun.com</a></p>
+
+    </div>
+    <div class="article-footer">
+<blockquote class="mt-2x">
+  <ul class="post-copyright list-unstyled">
+    <li class="post-copyright-link hidden-xs">
+      <strong>本文链接: </strong>
+      <a href="https://hinwai.top/2020/08/docker/" title="關於Docker的那些事" target="_blank" rel="external">https://hinwai.top/2020/08/docker/</a>
+    </li>
+    <li class="post-copyright-license">
+      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+    </li>
+  </ul>
+</blockquote>
+
+<div class="panel panel-default panel-badger">
+  <div class="panel-body">
+    <figure class="media">
+      <div class="media-left">
+        <a href="https://github.com/HinWaei" target="_blank" class="img-burn thumb-sm visible-lg">
+          <img src="https://hinwai.top/avatar.jpeg" class="img-rounded w-full" alt="">
+        </a>
+      </div>
+      <div class="media-body">
+        <h3 class="media-heading"><a href="https://github.com/HinWaei" target="_blank"><span class="text-dark">Hinux_Chau</span><small class="ml-1x">亂流下平安</small></a></h3>
+        <div>A Coder</div>
+      </div>
+    </figure>
+  </div>
+</div>
+    </div>
+  </article>
+<section id="comments">
+</section>
+
+</div><nav class="bar bar-footer clearfix" data-stick-bottom>
+    <div class="bar-inner">
+        <ul class="pager pull-left">
+            <li class="prev">
+                <a href="https://hinwai.top/2020/08/tools/" title="一些工具"><i
+                        class="icon icon-angle-left"
+                        aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
+            </li>
             
-
-<h1 id="hinux-嘅朋友仔們">Hinux 嘅朋友仔們</h1>
-
-
-<p><a target="_blank" href=https://amazingrise.net title=左手的世界 class="friendurl"></p> 
-	<div class="frienddiv">
-      <div class="frienddivleft">
-        <img class="myfriend" src=https://avatars0.githubusercontent.com/u/8315221?s&#61;400&amp;u&#61;30368cb53a98d44e4865776bf5a83e353573f309&amp;v&#61;4 />
-      </div>
-      <div class="frienddivright">
-        左手的世界<br />Rise&#39;s Blog
-      </div>
-    </div></a>
-
-
-
-<p><a target="_blank" href=https://blanca.world/ title=咸鱼白的窝 class="friendurl"></p> 
-	<div class="frienddiv">
-      <div class="frienddivleft">
-        <img class="myfriend" src=https://avatars2.githubusercontent.com/u/29428546?s&#61;400&amp;u&#61;0c6f317e1aa37818584114bfeac648ee739c885f&amp;v&#61;4 />
-      </div>
-      <div class="frienddivright">
-        咸鱼白的窝<br />一些奇奇怪怪的东西
-      </div>
-    </div></a>
-
-
-
-<p><a target="_blank" href=https://geno1024.com title=😐Geno1024 class="friendurl"></p> 
-	<div class="frienddiv">
-      <div class="frienddivleft">
-        <img class="myfriend" src=https://avatars2.githubusercontent.com/u/6427392?s&#61;400&amp;u&#61;043dbe2acff0b90ffc2a7be3097d4519b1804fd1&amp;v&#61;4 />
-      </div>
-      <div class="frienddivright">
-        😐Geno1024<br />😐还没上线的Blog
-      </div>
-    </div></a>
-
-
+            <li class="toggle-toc">
+                <a class="toggle-btn collapsed" data-toggle="collapse" href="#collapseToc" aria-expanded="false"
+                    title="文章目录" role="button">
+                    <span>[&nbsp;</span><span>文章目录</span>
+                    <i class="text-collapsed icon icon-anchor"></i>
+                    <i class="text-in icon icon-close"></i>
+                    <span>]</span>
+                </a>
+            </li>
+        </ul>
+        <div class="bar-right">
         </div>
-</main>
-<footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
+    </div>
+</nav>
+
+</main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 <ul class="social-links">
     <li><a href="https://github.com/HinWaei" target="_blank" title="github" data-toggle=tooltip data-placement=top >
             <i class="icon icon-github"></i></a></li>
@@ -442,6 +443,7 @@
         hasInnerContainers: true,
     });
 </script>
+
 
   </body>
 </html>
