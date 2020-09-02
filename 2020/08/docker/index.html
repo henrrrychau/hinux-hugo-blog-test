@@ -2,7 +2,7 @@
 <html lang="zh">
   <head>
     <title>
-        關於Docker的那些事 - Lost Space - Hinux&#39;s Blog
+        關於Docker一些奇奇怪怪的東西 - Lost Space - Hinux&#39;s Blog
       </title>
         <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -22,32 +22,32 @@
     
     <meta name="description" content="Docker是什麼 Docker中文翻译为&amp;rdquo;码头搬运工人&amp;rdquo;，是一个开源软件。 Docker容器与虚拟机类似，但二者在原理" />
     <meta name="generator" content="Hugo 0.57.2 with theme pure" />
-    <title>關於Docker的那些事 - Lost Space - Hinux&#39;s Blog</title>
+    <title>關於Docker一些奇奇怪怪的東西 - Lost Space - Hinux&#39;s Blog</title>
     
     
     <link rel="stylesheet" href="https://hinwai.top/css/style.min.96344896368df9cb930b382c93ca5a7234d7118b7754e394f15c1e929cc37e10.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
-    <meta property="og:title" content="關於Docker的那些事" />
+    <meta property="og:title" content="關於Docker一些奇奇怪怪的東西" />
 <meta property="og:description" content="Docker是什麼 Docker中文翻译为&rdquo;码头搬运工人&rdquo;，是一个开源软件。 Docker容器与虚拟机类似，但二者在原理" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://hinwai.top/2020/08/docker/" />
 <meta property="article:published_time" content="2020-08-31T23:26:21+08:00" />
 <meta property="article:modified_time" content="2020-08-31T23:26:21+08:00" />
-<meta itemprop="name" content="關於Docker的那些事">
+<meta itemprop="name" content="關於Docker一些奇奇怪怪的東西">
 <meta itemprop="description" content="Docker是什麼 Docker中文翻译为&rdquo;码头搬运工人&rdquo;，是一个开源软件。 Docker容器与虚拟机类似，但二者在原理">
 
 
 <meta itemprop="datePublished" content="2020-08-31T23:26:21&#43;08:00" />
 <meta itemprop="dateModified" content="2020-08-31T23:26:21&#43;08:00" />
-<meta itemprop="wordCount" content="416">
+<meta itemprop="wordCount" content="902">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="關於Docker的那些事"/>
+<meta name="twitter:title" content="關於Docker一些奇奇怪怪的東西"/>
 <meta name="twitter:description" content="Docker是什麼 Docker中文翻译为&rdquo;码头搬运工人&rdquo;，是一个开源软件。 Docker容器与虚拟机类似，但二者在原理"/>
 
     <!--[if lte IE 9]>
@@ -179,6 +179,10 @@
             <li class="tag-list-item"><a href="https://hinwai.top/tags/%E5%9F%BA%E7%A1%80%E7%9F%A5%E8%AF%86/" class="tag-list-link">基础知识</a><span
                     class="tag-list-count">1</span></li>
             
+            
+            <li class="tag-list-item"><a href="https://hinwai.top/tags/%E5%B7%A5%E5%85%B7/" class="tag-list-link">工具</a><span
+                    class="tag-list-count">1</span></li>
+            
         </ul>
 
     </div>
@@ -191,7 +195,7 @@
             <li>
                 <div class="item-inner">
                     <p class="item-title">
-                        <a href="https://hinwai.top/2020/08/docker/" class="title">關於Docker的那些事</a>
+                        <a href="https://hinwai.top/2020/08/docker/" class="title">關於Docker一些奇奇怪怪的東西</a>
                     </p>
                     <p class="item-date">
                         <time datetime="2020-08-31 23:26:21 &#43;0800 CST" itemprop="datePublished">2020-08-31</time>
@@ -201,7 +205,7 @@
             <li>
                 <div class="item-inner">
                     <p class="item-title">
-                        <a href="https://hinwai.top/2020/08/tools/" class="title">一些工具</a>
+                        <a href="https://hinwai.top/2020/08/tools/" class="title">一些常用工具</a>
                     </p>
                     <p class="item-date">
                         <time datetime="2020-08-30 21:03:41 &#43;0800 CST" itemprop="datePublished">2020-08-30</time>
@@ -263,7 +267,7 @@
   <a
     class="article-title"
     href="/2020/08/docker/"
-    >關於Docker的那些事</a
+    >關於Docker一些奇奇怪怪的東西</a
   >
 </h1>
 
@@ -279,8 +283,8 @@
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/08/docker/#comments"
             class="article-comment-link">评论</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 416字</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1分 </span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 902字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
@@ -309,13 +313,46 @@ Docker容器与虚拟机类似，但二者在原理上不同。容器是OS-level
 
 <p>腾讯云:<a href="https://mirror.ccs.tencentyun.com">https://mirror.ccs.tencentyun.com</a></p>
 
+<h2 id="修改方式">修改方式</h2>
+
+<p>打开你的terminal</p>
+
+<pre><code class="language-bash">$ sudo nano /etc/default/docker
+</code></pre>
+
+<p>在最后一行加上</p>
+
+<pre><code>DOCKER_OPTS=&quot;--registry-mirror=站点地址&quot;
+</code></pre>
+
+<p>回到terminal</p>
+
+<pre><code class="language-bash">$ sudo systemctl daemon-reload
+$ sudo systemctl restart docker
+</code></pre>
+
+<h2 id="docker的一些坑">Docker的一些坑</h2>
+
+<h4 id="no-command-specified错误">No Command Specified错误</h4>
+
+<p><em>解决链接:<a href="https://serverfault.com/questions/757210/no-command-specified-from-re-imported-docker-image-container">https://serverfault.com/questions/757210/no-command-specified-from-re-imported-docker-image-container</a></em></p>
+
+<p>在docker中export容器仅仅是将其文件系统给export出来，有很多信息都丢失了。因此如果要将已被冻结的image（原本是个container）给import回去，就必须要加一些东西来重构context。</p>
+
+<p>举个例子，假设我们要导入一个名为dump.tar的image文件。在用于构建dump.tar这个image的Dockerfile中有一句CMD [&ldquo;/bin/bash&rdquo;]，而这句话对于container正常运行起至关重要的作用，那就必须要用这种方式来导入这个image文件：</p>
+
+<pre><code class="language-bash">$ sudo docker import \
+        --change 'CMD [&quot;bin/bash&quot;]' \
+        /path/to/dump.tar imagename:tagname
+</code></pre>
+
     </div>
     <div class="article-footer">
 <blockquote class="mt-2x">
   <ul class="post-copyright list-unstyled">
     <li class="post-copyright-link hidden-xs">
       <strong>本文链接: </strong>
-      <a href="https://hinwai.top/2020/08/docker/" title="關於Docker的那些事" target="_blank" rel="external">https://hinwai.top/2020/08/docker/</a>
+      <a href="https://hinwai.top/2020/08/docker/" title="關於Docker一些奇奇怪怪的東西" target="_blank" rel="external">https://hinwai.top/2020/08/docker/</a>
     </li>
     <li class="post-copyright-license">
       <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
@@ -347,7 +384,7 @@ Docker容器与虚拟机类似，但二者在原理上不同。容器是OS-level
     <div class="bar-inner">
         <ul class="pager pull-left">
             <li class="prev">
-                <a href="https://hinwai.top/2020/08/tools/" title="一些工具"><i
+                <a href="https://hinwai.top/2020/08/tools/" title="一些常用工具"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
             </li>

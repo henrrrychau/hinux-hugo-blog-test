@@ -4,14 +4,21 @@
   
   <url>
     <loc>https://hinwai.top/</loc>
-    <lastmod>2020-08-30T21:03:41+08:00</lastmod>
+    <lastmod>2020-08-31T23:26:21+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://hinwai.top/posts/</loc>
-    <lastmod>2020-08-30T21:03:41+08:00</lastmod>
+    <lastmod>2020-08-31T23:26:21+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hinwai.top/2020/08/docker/</loc>
+    <lastmod>2020-08-31T23:26:21+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
