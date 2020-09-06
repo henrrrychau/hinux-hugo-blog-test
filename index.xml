@@ -5,10 +5,19 @@
     <link>https://hinwai.top/</link>
     <description>Recent content on Lost Space - Hinux&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Mon, 31 Aug 2020 23:26:21 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 06 Sep 2020 22:01:43 +0800</lastBuildDate>
     
         <atom:link href="https://hinwai.top/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Vscode的python插件突然无法识别import的解决方案</title>
+      <link>https://hinwai.top/2020/09/new-term/</link>
+      <pubDate>Sun, 06 Sep 2020 22:01:43 +0800</pubDate>
+      
+      <guid>https://hinwai.top/2020/09/new-term/</guid>
+      <description>两百多天的家里蹲大学生活可算是告一段落了，然而一部大型灾难片即将上映！ 《开學！》 由于疫情的原因，你校采用了封闭式管理措施。（这怎么能叫封闭式</description>
+    </item>
     
     <item>
       <title>關於Docker一些奇奇怪怪的東西</title>
