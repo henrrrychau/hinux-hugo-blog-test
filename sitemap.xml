@@ -17,6 +17,13 @@
   </url>
   
   <url>
+    <loc>https://hinwai.top/tags/</loc>
+    <lastmod>2020-09-06T22:01:43+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://hinwai.top/2020/09/new-term/</loc>
     <lastmod>2020-09-06T22:01:43+08:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -24,8 +31,8 @@
   </url>
   
   <url>
-    <loc>https://hinwai.top/tags/</loc>
-    <lastmod>2020-08-31T23:26:21+08:00</lastmod>
+    <loc>https://hinwai.top/tags/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/</loc>
+    <lastmod>2020-09-06T22:01:43+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
