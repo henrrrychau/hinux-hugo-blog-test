@@ -41,11 +41,11 @@
 
 <meta itemprop="datePublished" content="2020-10-05T16:00:44&#43;08:00" />
 <meta itemprop="dateModified" content="2020-10-05T16:00:44&#43;08:00" />
-<meta itemprop="wordCount" content="858">
+<meta itemprop="wordCount" content="1106">
 
 
 
-<meta itemprop="keywords" content="" />
+<meta itemprop="keywords" content="工具," />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="關於Maven的一些東西（不定期更）"/>
 <meta name="twitter:description" content="有一段时间没更blog了，之前一直都没时间写，害。。。 今天堂姐结婚，可惜学校只有四天的假期（就这？四天怎么够表达我对祖国母亲生日的激动之情啊"/>
@@ -181,7 +181,7 @@
             
             
             <li class="tag-list-item"><a href="https://hinwai.top/tags/%E5%B7%A5%E5%85%B7/" class="tag-list-link">工具</a><span
-                    class="tag-list-count">2</span></li>
+                    class="tag-list-count">4</span></li>
             
             
             <li class="tag-list-item"><a href="https://hinwai.top/tags/%E7%96%91%E9%9A%BE%E6%9D%82%E7%97%87/" class="tag-list-link">疑难杂症</a><span
@@ -283,12 +283,16 @@
   <time datetime="2020-10-05 16:00:44 &#43;0800 HKT" itemprop="datePublished">2020-10-05</time>
 </a>
 </span>
-
+  
+  <span class="article-tag">
+    <i class="icon icon-tags"></i>&nbsp;
+    <a class="article-tag-link" href="/tags/%E5%B7%A5%E5%85%B7/"> 工具 </a>
+  </span>
 
         <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/10/maven/#comments"
             class="article-comment-link">评论</a></span>
-		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 858字</span>
-		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2分 </span>
+		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1106字</span>
+		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 3分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
@@ -303,7 +307,7 @@
 
 <p>回到学校之后，换了个衣服，吃了个午饭，就开始一头扎进Maven的文档里。配置和使用的过程也并不是那么一帆风顺，这里记录一下使用中遇到的一些问题（不知道以后会不会遇到另一些奇奇怪怪的问题，这里的问题是暂时碰到的，以后不定期更新遇到的问题解决方案）</p>
 
-<h1 id="老生常谈的mirror问题">老生常谈的Mirror问题</h1>
+<h3 id="老生常谈的mirror问题">老生常谈的Mirror问题</h3>
 
 <p>装上maven之后，我在终端里输入了</p>
 
@@ -338,6 +342,22 @@ $ nano settings.xml #因为这个settings.xml一开始是不存在的，要自�
 </code></pre>
 
 <p>其中这里的mirrorOf默认是central，也就是说这个仓库是id为central的镜像站。如果要从id不是central的仓库中下载其他artifact则会跑到各自对应id的镜像站上下载（PS：一个mirrorOf最多对应一个id，如果出现一对多的情况则只取第一个match，其他的match则会被丢弃）</p>
+
+<h3 id="jar文件找不到main-class的问题">jar文件找不到main class的问题</h3>
+
+<p>今天写了个小hello world，结果发现编译出来的jar跑不了</p>
+
+<pre><code class="language-bash">$ maven archetype:generate
+#......(omitted)
+$ mvn package
+$ java -jar target/noobapp-1.0.jar
+no main manifest attribute, in target/noobapp-1.0.jar
+</code></pre>
+
+<p>看了一下文档，发现原来jar文件需要手动指定Main-Class入口点<br />
+于是找到了两种解决方法（假设我们的noobapp-1.0入口点包含在noobpkg这个包里面的App.java）：<br />
+<strong>1. 在Windows下以压缩包形式打开.jar，修改MANIFEST FILE，将里面Main Class:后面的内容更改称noobpkg.App</strong><br />
+<strong>2. 直接手动指定入口点java -cp target/noobapp-1.0.jar noobpkg.App</strong></p>
 
     </div>
     <div class="article-footer">
