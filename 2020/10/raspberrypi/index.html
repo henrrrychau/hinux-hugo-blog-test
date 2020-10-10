@@ -311,7 +311,7 @@
 
 <p>这里可以参照<a href="/2020/10/dd">dd制作bootable disc</a>的那篇文章来进行安装，只不过将ubuntu换成raspbian的img而已。</p>
 
-<p>安装完之后进入boot分区，修改cmdline.txt文件，在文件最尾部换行加上dtoverlay=dwc2，再修改config.txt文件，在rootwait后面加上modules-load=dwc2,g_ether。</p>
+<p>安装完之后进入boot分区，修改config.txt文件，在文件最尾部换行加上dtoverlay=dwc2，再修改cmdline.txt文件，在rootwait后面加上modules-load=dwc2,g_ether。</p>
 
 <h3 id="透过usb-ethernet将pi-zero和电脑连起来">透过USB Ethernet将Pi Zero和电脑连起来</h3>
 
