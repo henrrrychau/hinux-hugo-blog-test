@@ -5,10 +5,19 @@
     <link>https://hinwai.top/</link>
     <description>Recent content on Lost Space - Hinux&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Thu, 08 Oct 2020 22:04:39 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 09 Oct 2020 17:40:18 +0800</lastBuildDate>
     
         <atom:link href="https://hinwai.top/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>折騰Raspberry Pi Zero日記</title>
+      <link>https://hinwai.top/2020/10/raspberrypi/</link>
+      <pubDate>Fri, 09 Oct 2020 17:40:18 +0800</pubDate>
+      
+      <guid>https://hinwai.top/2020/10/raspberrypi/</guid>
+      <description>真的太折磨王了 先上info 型号：树莓派 Zero（无WIFI模块） 系统：Ubuntu 安装系统 直接点我选系统 这里我选择了没有桌面的Raspbia</description>
+    </item>
     
     <item>
       <title>dd製作bootable disc</title>
