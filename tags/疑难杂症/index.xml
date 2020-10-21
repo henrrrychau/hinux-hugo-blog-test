@@ -11,6 +11,15 @@
     
     
     <item>
+      <title>MySQL 學習筆記</title>
+      <link>https://hinwai.top/2020/10/mysql/</link>
+      <pubDate>Wed, 21 Oct 2020 16:19:34 +0800</pubDate>
+      
+      <guid>https://hinwai.top/2020/10/mysql/</guid>
+      <description>因為做項目需要,就學了一些MySQL.也不想把太多的東西記在腦子里,所以就在這裡做一些學習小筆記 Basic Info System: Ubuntu 19.10 Installation 例行升級 sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -y 安裝my</description>
+    </item>
+    
+    <item>
       <title>折騰Raspberry Pi Zero日記</title>
       <link>https://hinwai.top/2020/10/raspberrypi/</link>
       <pubDate>Fri, 09 Oct 2020 17:40:18 +0800</pubDate>
