@@ -21,11 +21,11 @@
     
     
     <meta name="description" content="TCP的過程 三次握手： client向伺服器發送SYN請求建立TCP連結（伺服器確認客戶端的發送能力和伺服器接收能力是正常的） 伺服器回覆SYN" />
-    <meta name="generator" content="Hugo 0.57.2 with theme pure" />
+    <meta name="generator" content="Hugo 0.68.3 with theme pure" />
     <title>TCP四次揮手 - Lost Space - Hinux&#39;s Blog</title>
     
     
-    <link rel="stylesheet" href="https://hinwai.top/css/style.min.96344896368df9cb930b382c93ca5a7234d7118b7754e394f15c1e929cc37e10.css">
+    <link rel="stylesheet" href="https://hinwai.top/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
@@ -37,16 +37,13 @@
 <meta property="article:modified_time" content="2020-10-08T16:32:30+08:00" />
 <meta itemprop="name" content="TCP四次揮手">
 <meta itemprop="description" content="TCP的過程 三次握手： client向伺服器發送SYN請求建立TCP連結（伺服器確認客戶端的發送能力和伺服器接收能力是正常的） 伺服器回覆SYN">
-
-
 <meta itemprop="datePublished" content="2020-10-08T16:32:30&#43;08:00" />
 <meta itemprop="dateModified" content="2020-10-08T16:32:30&#43;08:00" />
 <meta itemprop="wordCount" content="712">
 
 
 
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="TCP四次揮手"/>
 <meta name="twitter:description" content="TCP的過程 三次握手： client向伺服器發送SYN請求建立TCP連結（伺服器確認客戶端的發送能力和伺服器接收能力是正常的） 伺服器回覆SYN"/>
 
@@ -199,6 +196,16 @@
             <li>
                 <div class="item-inner">
                     <p class="item-title">
+                        <a href="https://hinwai.top/2021/09/utility/" class="title">Utility Checker</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-09-10 11:54:37 &#43;0800 HKT" itemprop="datePublished">2021-09-10</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
                         <a href="https://hinwai.top/2020/10/mysql/" class="title">MySQL 筆記</a>
                     </p>
                     <p class="item-date">
@@ -233,16 +240,6 @@
                     </p>
                     <p class="item-date">
                         <time datetime="2020-10-08 16:32:30 &#43;0800 HKT" itemprop="datePublished">2020-10-08</time>
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div class="item-inner">
-                    <p class="item-title">
-                        <a href="https://hinwai.top/2020/10/maven/" class="title">關於Maven的一些東西（不定期更）</a>
-                    </p>
-                    <p class="item-date">
-                        <time datetime="2020-10-05 16:00:44 &#43;0800 HKT" itemprop="datePublished">2020-10-05</time>
                     </p>
                 </div>
             </li>
@@ -285,39 +282,28 @@
 </span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/10/tcp_goodbye/#comments"
-            class="article-comment-link">评论</a></span>
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 712字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      
-
-<h2 id="tcp的過程">TCP的過程</h2>
-
+      <h2 id="tcp的過程">TCP的過程</h2>
 <p>三次握手：
-client向伺服器發送SYN請求建立TCP連結（伺服器確認客戶端的發送能力和伺服器接收能力是正常的）<br />
+client向伺服器發送SYN請求建立TCP連結（伺服器確認客戶端的發送能力和伺服器接收能力是正常的）<br>
 伺服器回覆SYN-ACK給client表示收到請求（client認為伺服器發送和接受能力正常，此外client收到伺服器的echo，說明自己的發送接受能力亦正常）
-client向伺服器發送ACK 成功建立連結（client接受發送能力正常，伺服器接受發送能力亦正常 可以建立連結）<br />
-<img src="https://wiki.mikrotik.com/images/f/fc/Image2001.gif" alt="tcp_process" /></p>
-
+client向伺服器發送ACK 成功建立連結（client接受發送能力正常，伺服器接受發送能力亦正常 可以建立連結） <br>
+<img src="https://wiki.mikrotik.com/images/f/fc/Image2001.gif" alt="tcp_process"></p>
 <h2 id="關於tcp四次揮手的一個自編小故事">關於TCP四次揮手的一個自編小故事</h2>
-
 <p>有两个诗人client和server
-client要离开了 于是发一个fin和seq=x的包给server 然后进入fin_wait_1状态 此时client已经没有数据发给server了 但仍然可以接受数据<br />
+client要离开了 于是发一个fin和seq=x的包给server 然后进入fin_wait_1状态 此时client已经没有数据发给server了 但仍然可以接受数据<br>
 （诗人client：我先走了 但仍然还没走 不知道server有什么要说的）</p>
-
-<p>server收到fin之后发一个ack和seq=x+1给server表示“收到”并“同意”client结束连接的请求<br />
+<p>server收到fin之后发一个ack和seq=x+1给server表示“收到”并“同意”client结束连接的请求<br>
 （诗人server：好的）</p>
-
-<p>中间server可能还有没法完的数据要发给client 就在这个间隙发送 好比一个朋友和你说再见之后你说先别走然后唠嗑了一点叮嘱<br />
+<p>中间server可能还有没法完的数据要发给client 就在这个间隙发送 好比一个朋友和你说再见之后你说先别走然后唠嗑了一点叮嘱<br>
 （诗人server：先别走 记得保重身体blahblahblah……）</p>
-
-<p>server完成送礼/叮嘱后发送一个fin和seq=y “西出阳关无故人” 并祝client一路顺风进入last_ack状态<br />
+<p>server完成送礼/叮嘱后发送一个fin和seq=y “西出阳关无故人” 并祝client一路顺风进入last_ack状态<br>
 （诗人server：你去吧 慢走）</p>
-
-<p>client收到最后一个fin之后 再发一个ack给server告诉他“收到了，你回去吧，天色晚了”<br />
+<p>client收到最后一个fin之后 再发一个ack给server告诉他“收到了，你回去吧，天色晚了”<br>
 server收到ack后 便不舍地离去 关闭连接进入CLOSED状态 client见到server不见后 亦使得连接CLOSED 上马向落日余晖走去</p>
 
     </div>
@@ -329,7 +315,8 @@ server收到ack后 便不舍地离去 关闭连接进入CLOSED状态 client见�
       <a href="https://hinwai.top/2020/10/tcp_goodbye/" title="TCP四次揮手" target="_blank" rel="external">https://hinwai.top/2020/10/tcp_goodbye/</a>
     </li>
     <li class="post-copyright-license">
-      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+      <strong>License: </strong>
+        
     </li>
   </ul>
 </blockquote>
@@ -349,11 +336,9 @@ server收到ack后 便不舍地离去 关闭连接进入CLOSED状态 client见�
     </figure>
   </div>
 </div>
+
     </div>
   </article>
-<section id="comments">
-</section>
-
 </div><nav class="bar bar-footer clearfix" data-stick-bottom>
     <div class="bar-inner">
         <ul class="pager pull-left">
@@ -383,6 +368,7 @@ server收到ack后 便不舍地离去 关闭连接进入CLOSED状态 client见�
     </div>
 </nav>
 
+
 </main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 <ul class="social-links">
     <li><a href="https://github.com/HinWaei" target="_blank" title="github" data-toggle=tooltip data-placement=top >
@@ -393,10 +379,10 @@ server收到ack后 便不舍地离去 关闭连接进入CLOSED状态 client见�
             <i class="icon icon-twitter"></i></a></li>
 </ul>
   <div class="copyright">
-    &copy;
-    Hinux. Following <a href="http://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a>
+    &copy;2020  -
+    2021
     <div class="publishby">
-        Theme by <a href="https://github.com/HinWaei" target="_blank"> Hinux </a>base on <a href="https://blog.xiaohei.im/">xiaoheiAh</a>'s<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> Pure</a>.
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
     </div>
   </div>
 </footer>

@@ -21,11 +21,11 @@
     
     
     <meta name="description" content="真的太折磨王了 先上info 型号：树莓派 Zero（无WIFI模块） 系统：Ubuntu 安装系统 直接点我选系统 这里我选择了没有桌面的Raspbia" />
-    <meta name="generator" content="Hugo 0.57.2 with theme pure" />
+    <meta name="generator" content="Hugo 0.68.3 with theme pure" />
     <title>折騰Raspberry Pi Zero日記 - Lost Space - Hinux&#39;s Blog</title>
     
     
-    <link rel="stylesheet" href="https://hinwai.top/css/style.min.96344896368df9cb930b382c93ca5a7234d7118b7754e394f15c1e929cc37e10.css">
+    <link rel="stylesheet" href="https://hinwai.top/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
@@ -37,16 +37,13 @@
 <meta property="article:modified_time" content="2020-10-09T17:40:18+08:00" />
 <meta itemprop="name" content="折騰Raspberry Pi Zero日記">
 <meta itemprop="description" content="真的太折磨王了 先上info 型号：树莓派 Zero（无WIFI模块） 系统：Ubuntu 安装系统 直接点我选系统 这里我选择了没有桌面的Raspbia">
-
-
 <meta itemprop="datePublished" content="2020-10-09T17:40:18&#43;08:00" />
 <meta itemprop="dateModified" content="2020-10-09T17:40:18&#43;08:00" />
 <meta itemprop="wordCount" content="1551">
 
 
 
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="折騰Raspberry Pi Zero日記"/>
 <meta name="twitter:description" content="真的太折磨王了 先上info 型号：树莓派 Zero（无WIFI模块） 系统：Ubuntu 安装系统 直接点我选系统 这里我选择了没有桌面的Raspbia"/>
 
@@ -199,6 +196,16 @@
             <li>
                 <div class="item-inner">
                     <p class="item-title">
+                        <a href="https://hinwai.top/2021/09/utility/" class="title">Utility Checker</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-09-10 11:54:37 &#43;0800 HKT" itemprop="datePublished">2021-09-10</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
                         <a href="https://hinwai.top/2020/10/mysql/" class="title">MySQL 筆記</a>
                     </p>
                     <p class="item-date">
@@ -233,16 +240,6 @@
                     </p>
                     <p class="item-date">
                         <time datetime="2020-10-08 16:32:30 &#43;0800 HKT" itemprop="datePublished">2020-10-08</time>
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div class="item-inner">
-                    <p class="item-title">
-                        <a href="https://hinwai.top/2020/10/maven/" class="title">關於Maven的一些東西（不定期更）</a>
-                    </p>
-                    <p class="item-date">
-                        <time datetime="2020-10-05 16:00:44 &#43;0800 HKT" itemprop="datePublished">2020-10-05</time>
                     </p>
                 </div>
             </li>
@@ -285,61 +282,38 @@
 </span>
 
 
-        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/10/raspberrypi/#comments"
-            class="article-comment-link">评论</a></span>
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1551字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 4分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      
-
-<p><em>真的太折磨王了</em></p>
-
+      <p><em>真的太折磨王了</em></p>
 <h3 id="先上info">先上info</h3>
-
-<p>型号：树莓派 Zero（无WIFI模块）<br />
+<p>型号：树莓派 Zero（无WIFI模块）<br>
 系统：Ubuntu</p>
-
 <h3 id="安装系统">安装系统</h3>
-
 <p><a href="https://www.raspberrypi.org/downloads/raspberry-pi-os/">直接点我选系统</a></p>
-
 <p>这里我选择了没有桌面的Raspbian-Lite版，因为zero的性能本来也不怎么样，简简单单才是真233333。</p>
-
 <p>把SD卡插到读卡器上，连接到电脑</p>
-
 <p>这里可以参照<a href="/2020/10/dd">dd制作bootable disc</a>的那篇文章来进行安装，只不过将ubuntu换成raspbian的img而已。</p>
-
 <p>安装完之后进入boot分区，修改config.txt文件，在文件最尾部换行加上dtoverlay=dwc2，再修改cmdline.txt文件，在rootwait后面加上modules-load=dwc2,g_ether。</p>
-
 <h3 id="透过usb-ethernet将pi-zero和电脑连起来">透过USB Ethernet将Pi Zero和电脑连起来</h3>
-
 <p>这里假设你已经安装好系统了，下一步就是配置USB Ethernet连接了。</p>
-
 <p>Pi Zero有两个口，一个是连USB（带OTG功能）的，一个是单纯充电的PWR_IN口，只需要用资料线通过USB口和电脑给连接起来就好了（两个口都有供电功能）。</p>
-
 <p>插上之后右上角应该会有一个USB Ethernet Connecting的东西，点进去选择Wired Settings-&gt;USB Ethernet的那个齿轮图标-&gt;将IPv4和IPv6都改成Link Local-only，这样就能通过USB Ethernet连接到电脑了。</p>
-
-<p><strong>这里插句题外话：</strong><br />
-Windows10下需要安装RNDIS服务（<a href="https://evwiki.ensto.technology/download/attachments/917557/rndis_.zip?version=1&amp;modificationDate=1507131884000&amp;api=v2&amp;download=true">点我下载驱动</a>）和Bonjour服务才能识别到Pi Zero，否则插USB（数据线！不是充电线）只会识别成COM设备。<br />
+<p><strong>这里插句题外话：</strong><br>
+Windows10下需要安装RNDIS服务（<a href="https://evwiki.ensto.technology/download/attachments/917557/rndis_.zip?version=1&amp;modificationDate=1507131884000&amp;api=v2&amp;download=true">点我下载驱动</a>）和Bonjour服务才能识别到Pi Zero，否则插USB（数据线！不是充电线）只会识别成COM设备。<br>
 由于RNDIS驱动程式没有数字签名，需要按照以下步骤禁用数字签名校验：</p>
-
 <pre><code>1.屏幕右下角点击小图标托盘隔壁的“通知”图标-&gt;“所有设置”-&gt;“更新和安全”  
 2.找到恢复-&gt;点击“高级启动”下的“立即重启”重启电脑  
 3.重启后选择“疑难解答”-&gt;“高级选项”-&gt;“启动设置”-&gt;点击“重启”  
 4.开机的时候狂按F7以禁用驱动程序强制签名。（会弹出一个框大概问你是否继续安装，这时候点继续就好了）  
 </code></pre>
-
-<p>替换RNDIS驱动的部位就选择设备管理器中新识别出来的COM设备那里，右键更新驱动然后选择从电脑上安装，再选中下载好的那个inf文件就好了。<br />
+<p>替换RNDIS驱动的部位就选择设备管理器中新识别出来的COM设备那里，右键更新驱动然后选择从电脑上安装，再选中下载好的那个inf文件就好了。<br>
 至于苹果的Bonjour服务（Mac是自带这个服务的）可以点<a href="https://download.info.apple.com/Mac_OS_X/061-8098.20100603.gthyu/BonjourPSSetup.exe">这里</a>直接下载</p>
-
 <h3 id="ssh登入pi-zero">SSH登入Pi Zero</h3>
-
 <p>这时候USB Ethernet已经连接成功了，默认的域名为raspberrypi.local，可以在terminal里ping一下raspberrypi.local域名看看能不能resolve成功，如果解析失败的话可以重启一下电脑。</p>
-
 <p>如果能ping通的话说明电脑和pi zero是可以建立网路连结的，直接入了它（指SSH登入别想多了哈哈哈哈🤣）</p>
-
 <pre><code class="language-bash">you@your_pc: $ ssh pi@raspberrypi.local
 pi@raspberrypi.locals password:#默认密码是raspberry
 Linux raspberrypi 5.4.51+ #1333 Mon Aug 10 16:38:02 BST 2020 armv6l
@@ -353,14 +327,11 @@ permitted by applicable law.
 Last login: Fri Oct  9 15:43:05 2020 from 169.254.7.185
 pi@raspberrypi:~ $ #看到这个的话就说明成功啦！
 </code></pre>
-
 <h3 id="换源">换源</h3>
-
 <p>打开/etc/apt/sources.list
-将源地址换成清华大学的<a href="http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/">http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/</a><br />
+将源地址换成清华大学的http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/<br>
 然后打开/etc/apt/sources.list.d/raspi.list
-将系统源换成<a href="http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/">http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/</a></p>
-
+将系统源换成http://mirrors.tuna.tsinghua.edu.cn/raspberrypi/</p>
 <p>因为Pi Zero本身不自带Wifi模块，只能通过usb和电脑共享网络（当然你也可以买一个RJ45/USB口转换器接到路由器上）。在Windows10下，可以在网络适配器页面，按Ctrl将具有Internet连接的适配器和RNDIS Gadget适配器都选上，然后右键桥接。</p>
 
     </div>
@@ -372,7 +343,8 @@ pi@raspberrypi:~ $ #看到这个的话就说明成功啦！
       <a href="https://hinwai.top/2020/10/raspberrypi/" title="折騰Raspberry Pi Zero日記" target="_blank" rel="external">https://hinwai.top/2020/10/raspberrypi/</a>
     </li>
     <li class="post-copyright-license">
-      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+      <strong>License: </strong>
+        
     </li>
   </ul>
 </blockquote>
@@ -392,11 +364,9 @@ pi@raspberrypi:~ $ #看到这个的话就说明成功啦！
     </figure>
   </div>
 </div>
+
     </div>
   </article>
-<section id="comments">
-</section>
-
 </div><nav class="bar bar-footer clearfix" data-stick-bottom>
     <div class="bar-inner">
         <ul class="pager pull-left">
@@ -426,6 +396,7 @@ pi@raspberrypi:~ $ #看到这个的话就说明成功啦！
     </div>
 </nav>
 
+
 </main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 <ul class="social-links">
     <li><a href="https://github.com/HinWaei" target="_blank" title="github" data-toggle=tooltip data-placement=top >
@@ -436,10 +407,10 @@ pi@raspberrypi:~ $ #看到这个的话就说明成功啦！
             <i class="icon icon-twitter"></i></a></li>
 </ul>
   <div class="copyright">
-    &copy;
-    Hinux. Following <a href="http://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a>
+    &copy;2020  -
+    2021
     <div class="publishby">
-        Theme by <a href="https://github.com/HinWaei" target="_blank"> Hinux </a>base on <a href="https://blog.xiaohei.im/">xiaoheiAh</a>'s<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> Pure</a>.
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
     </div>
   </div>
 </footer>

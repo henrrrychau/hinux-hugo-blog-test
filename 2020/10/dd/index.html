@@ -21,11 +21,11 @@
     
     
     <meta name="description" content="用了下別人的軟件，亦想過自己實現。 dd 永远滴神!! dd是disk dump的缩写，也有人称之为disk destroyer（调侃23333）。相比" />
-    <meta name="generator" content="Hugo 0.57.2 with theme pure" />
+    <meta name="generator" content="Hugo 0.68.3 with theme pure" />
     <title>dd製作bootable disc - Lost Space - Hinux&#39;s Blog</title>
     
     
-    <link rel="stylesheet" href="https://hinwai.top/css/style.min.96344896368df9cb930b382c93ca5a7234d7118b7754e394f15c1e929cc37e10.css">
+    <link rel="stylesheet" href="https://hinwai.top/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
@@ -37,16 +37,13 @@
 <meta property="article:modified_time" content="2020-10-08T22:04:39+08:00" />
 <meta itemprop="name" content="dd製作bootable disc">
 <meta itemprop="description" content="用了下別人的軟件，亦想過自己實現。 dd 永远滴神!! dd是disk dump的缩写，也有人称之为disk destroyer（调侃23333）。相比">
-
-
 <meta itemprop="datePublished" content="2020-10-08T22:04:39&#43;08:00" />
 <meta itemprop="dateModified" content="2020-10-08T22:04:39&#43;08:00" />
 <meta itemprop="wordCount" content="815">
 
 
 
-<meta itemprop="keywords" content="工具," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="工具," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="dd製作bootable disc"/>
 <meta name="twitter:description" content="用了下別人的軟件，亦想過自己實現。 dd 永远滴神!! dd是disk dump的缩写，也有人称之为disk destroyer（调侃23333）。相比"/>
 
@@ -199,6 +196,16 @@
             <li>
                 <div class="item-inner">
                     <p class="item-title">
+                        <a href="https://hinwai.top/2021/09/utility/" class="title">Utility Checker</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-09-10 11:54:37 &#43;0800 HKT" itemprop="datePublished">2021-09-10</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
                         <a href="https://hinwai.top/2020/10/mysql/" class="title">MySQL 筆記</a>
                     </p>
                     <p class="item-date">
@@ -233,16 +240,6 @@
                     </p>
                     <p class="item-date">
                         <time datetime="2020-10-08 16:32:30 &#43;0800 HKT" itemprop="datePublished">2020-10-08</time>
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div class="item-inner">
-                    <p class="item-title">
-                        <a href="https://hinwai.top/2020/10/maven/" class="title">關於Maven的一些東西（不定期更）</a>
-                    </p>
-                    <p class="item-date">
-                        <time datetime="2020-10-05 16:00:44 &#43;0800 HKT" itemprop="datePublished">2020-10-05</time>
                     </p>
                 </div>
             </li>
@@ -289,73 +286,47 @@
     <a class="article-tag-link" href="/tags/%E5%B7%A5%E5%85%B7/"> 工具 </a>
   </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/10/dd/#comments"
-            class="article-comment-link">评论</a></span>
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 815字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 2分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      
-
-<p><em>用了下別人的軟件，亦想過自己實現。</em></p>
-
+      <p><em>用了下別人的軟件，亦想過自己實現。</em></p>
 <h2 id="dd-永远滴神">dd 永远滴神!!</h2>
-
-<p>dd是disk dump的缩写，也有人称之为disk destroyer（调侃23333）。相比起来我更喜欢后者，因为dd确实太强大了<br />
+<p>dd是disk dump的缩写，也有人称之为disk destroyer（调侃23333）。相比起来我更喜欢后者，因为dd确实太强大了<br>
 以至于有些安全部门在销毁硬盘数据的时候都在用这玩意儿。</p>
-
 <h2 id="那么如何用dd来做bootable-disc呢">那么如何用dd来做bootable disc呢？</h2>
-
 <p>这里假设我们想要装ubuntu-19.10系统的iso到U盘上
 首先</p>
-
 <h4 id="确保你的iso文件是可引导的">确保你的iso文件是可引导的</h4>
-
 <p>具体操作：</p>
-
 <pre><code class="language-bash">$ file ubuntu-19.10-desktop-amd64.iso
 ubuntu-19.10-desktop-amd64.iso: DOS/MBR boot sector; partition 2 : ID=0xef, start-CHS (0x3ff,254,63), end-CHS (0x3ff,254,63), startsector 4073124, 7936 sectors
 </code></pre>
-
-<p>如果没有显示DOS/MBR bootsector等信息的话就说明这个iso不是hybrid iso，也就是无法直接烧写到U盘中并进行引导<br />
+<p>如果没有显示DOS/MBR bootsector等信息的话就说明这个iso不是hybrid iso，也就是无法直接烧写到U盘中并进行引导<br>
 这时候可以用isohybrid等工具使之变成可以直接引导的hybrid iso（如上方的ubuntu-19.10-desktop-amd64.iso就是一个hybrid iso）</p>
-
-<h4 id="查看u盘的路径-我也不知道叫啥好">查看u盘的路径（？我也不知道叫啥好）</h4>
-
+<h4 id="查看u盘的路径我也不知道叫啥好">查看u盘的路径（？我也不知道叫啥好）</h4>
 <pre><code class="language-bash">$ df -h
 </code></pre>
-
-<p>然后会显示/dev/sdc1,/dev/sdc2等类似于/dev/sdXn之类的东西<br />
+<p>然后会显示/dev/sdc1,/dev/sdc2等类似于/dev/sdXn之类的东西<br>
 其中sdc的c用于表示硬盘序号，你本机的硬盘可以是，而1表示这是1号partition（分区）</p>
-
 <h4 id="卸载sdc的已挂载分区">卸载sdc的已挂载分区</h4>
-
 <p>我直接偷懒了</p>
-
 <pre><code class="language-bash">$ sudo umount /dev/sdc*
 </code></pre>
-
 <p>表示卸载所有的已经挂载的分区
 这里如果不umount的话dd会提示device busy错误</p>
-
-<h4 id="格式化u盘-也就是重构文件系统">格式化U盘（也就是重构文件系统）</h4>
-
+<h4 id="格式化u盘也就是重构文件系统">格式化U盘（也就是重构文件系统）</h4>
 <pre><code class="language-bash">$ sudo mkfs.vfat -I /dev/sdc
 </code></pre>
-
 <p>-I表示强制把原本已有的文件系统override成fat</p>
-
-<h4 id="最重要的一步-dd写iso">最重要的一步！dd写iso</h4>
-
+<h4 id="最重要的一步dd写iso">最重要的一步！dd写iso</h4>
 <pre><code class="language-bash">$ sudo dd if=/path/to/ubuntu-19.10-desktop-amd64.iso of=/dev/sdc status=progress &amp;&amp; sync
 </code></pre>
-
-<p>写入的过程会点久，泡杯茶叹下世界慢慢等一下吧23333<br />
-这里的sync很重要，一开始就是没有写这个 &amp;&amp; sync导致写少了东西到U盘上从而引导失败<br />
-系统会将很快地将数据先写到读写速度相对高速的内核缓冲区（cache）中，然后相对拖拉一点的U盘慢悠悠从这个cache中读数据<br />
+<p>写入的过程会点久，泡杯茶叹下世界慢慢等一下吧23333<br>
+这里的sync很重要，一开始就是没有写这个 &amp;&amp; sync导致写少了东西到U盘上从而引导失败<br>
+系统会将很快地将数据先写到读写速度相对高速的内核缓冲区（cache）中，然后相对拖拉一点的U盘慢悠悠从这个cache中读数据<br>
 但有时候kernel还没有把cache中的数据完全写进U盘里面，这时候就需要sync来flush掉这个cache</p>
-
 <p>等sync完毕之后eject弹出就好了</p>
 
     </div>
@@ -367,7 +338,8 @@ ubuntu-19.10-desktop-amd64.iso: DOS/MBR boot sector; partition 2 : ID=0xef, star
       <a href="https://hinwai.top/2020/10/dd/" title="dd製作bootable disc" target="_blank" rel="external">https://hinwai.top/2020/10/dd/</a>
     </li>
     <li class="post-copyright-license">
-      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+      <strong>License: </strong>
+        
     </li>
   </ul>
 </blockquote>
@@ -387,11 +359,9 @@ ubuntu-19.10-desktop-amd64.iso: DOS/MBR boot sector; partition 2 : ID=0xef, star
     </figure>
   </div>
 </div>
+
     </div>
   </article>
-<section id="comments">
-</section>
-
 </div><nav class="bar bar-footer clearfix" data-stick-bottom>
     <div class="bar-inner">
         <ul class="pager pull-left">
@@ -421,6 +391,7 @@ ubuntu-19.10-desktop-amd64.iso: DOS/MBR boot sector; partition 2 : ID=0xef, star
     </div>
 </nav>
 
+
 </main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 <ul class="social-links">
     <li><a href="https://github.com/HinWaei" target="_blank" title="github" data-toggle=tooltip data-placement=top >
@@ -431,10 +402,10 @@ ubuntu-19.10-desktop-amd64.iso: DOS/MBR boot sector; partition 2 : ID=0xef, star
             <i class="icon icon-twitter"></i></a></li>
 </ul>
   <div class="copyright">
-    &copy;
-    Hinux. Following <a href="http://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a>
+    &copy;2020  -
+    2021
     <div class="publishby">
-        Theme by <a href="https://github.com/HinWaei" target="_blank"> Hinux </a>base on <a href="https://blog.xiaohei.im/">xiaoheiAh</a>'s<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> Pure</a>.
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
     </div>
   </div>
 </footer>

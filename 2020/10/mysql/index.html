@@ -21,11 +21,11 @@
     
     
     <meta name="description" content="因為做項目需要,就學了一些MySQL.也不想把太多的東西記在腦子里,所以就在這裡做一些學習小筆記 Basic Info System: Ubuntu 19.10 Installation 例行升級 sudo apt update &amp;amp;&amp;amp; sudo apt upgrade -y 安裝my" />
-    <meta name="generator" content="Hugo 0.57.2 with theme pure" />
+    <meta name="generator" content="Hugo 0.68.3 with theme pure" />
     <title>MySQL 筆記 - Lost Space - Hinux&#39;s Blog</title>
     
     
-    <link rel="stylesheet" href="https://hinwai.top/css/style.min.96344896368df9cb930b382c93ca5a7234d7118b7754e394f15c1e929cc37e10.css">
+    <link rel="stylesheet" href="https://hinwai.top/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
@@ -37,16 +37,13 @@
 <meta property="article:modified_time" content="2020-10-21T16:19:34+08:00" />
 <meta itemprop="name" content="MySQL 筆記">
 <meta itemprop="description" content="因為做項目需要,就學了一些MySQL.也不想把太多的東西記在腦子里,所以就在這裡做一些學習小筆記 Basic Info System: Ubuntu 19.10 Installation 例行升級 sudo apt update &amp;&amp; sudo apt upgrade -y 安裝my">
-
-
 <meta itemprop="datePublished" content="2020-10-21T16:19:34&#43;08:00" />
 <meta itemprop="dateModified" content="2020-10-21T16:19:34&#43;08:00" />
 <meta itemprop="wordCount" content="348">
 
 
 
-<meta itemprop="keywords" content="工具," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="工具," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="MySQL 筆記"/>
 <meta name="twitter:description" content="因為做項目需要,就學了一些MySQL.也不想把太多的東西記在腦子里,所以就在這裡做一些學習小筆記 Basic Info System: Ubuntu 19.10 Installation 例行升級 sudo apt update &amp;&amp; sudo apt upgrade -y 安裝my"/>
 
@@ -199,6 +196,16 @@
             <li>
                 <div class="item-inner">
                     <p class="item-title">
+                        <a href="https://hinwai.top/2021/09/utility/" class="title">Utility Checker</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-09-10 11:54:37 &#43;0800 HKT" itemprop="datePublished">2021-09-10</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
                         <a href="https://hinwai.top/2020/10/mysql/" class="title">MySQL 筆記</a>
                     </p>
                     <p class="item-date">
@@ -233,16 +240,6 @@
                     </p>
                     <p class="item-date">
                         <time datetime="2020-10-08 16:32:30 &#43;0800 HKT" itemprop="datePublished">2020-10-08</time>
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div class="item-inner">
-                    <p class="item-title">
-                        <a href="https://hinwai.top/2020/10/maven/" class="title">關於Maven的一些東西（不定期更）</a>
-                    </p>
-                    <p class="item-date">
-                        <time datetime="2020-10-05 16:00:44 &#43;0800 HKT" itemprop="datePublished">2020-10-05</time>
                     </p>
                 </div>
             </li>
@@ -289,50 +286,32 @@
     <a class="article-tag-link" href="/tags/%E5%B7%A5%E5%85%B7/"> 工具 </a>
   </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/10/mysql/#comments"
-            class="article-comment-link">评论</a></span>
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 348字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 1分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      
-
-<p>因為做項目需要,就學了一些MySQL.也不想把太多的東西記在腦子里,所以就在這裡做一些學習小筆記</p>
-
+      <p>因為做項目需要,就學了一些MySQL.也不想把太多的東西記在腦子里,所以就在這裡做一些學習小筆記</p>
 <h2 id="basic-info">Basic Info</h2>
-
 <p>System: Ubuntu 19.10</p>
-
 <h2 id="installation">Installation</h2>
-
 <p>例行升級</p>
-
 <pre><code class="language-bash">sudo apt update &amp;&amp; sudo apt upgrade -y
 </code></pre>
-
 <p>安裝mysql server</p>
-
 <pre><code class="language-bash">sudo apt install mysql-server
 </code></pre>
-
 <p><strong>這一步很重要，之前老是忘掉</strong>
 安全安裝</p>
-
 <pre><code class="language-bash">sudo mysql_secure_installation
 </code></pre>
-
 <p>然後輸入你的登入密碼，接下來那四個基本上都是y</p>
-
 <p>然後查看mysql的運行狀況</p>
-
 <pre><code class="language-bash">sudo systemctl status mysql
 #系統開機啟動
 sudo systemctl enable mysql
 </code></pre>
-
 <p>連結到MySQL server</p>
-
 <pre><code class="language-bash">sudo mysql -u root -p
 #如果看到mysql&gt;的話就成功了
 mysql&gt; show databases;
@@ -346,9 +325,7 @@ mysql&gt; show databases;
 +--------------------+
 4 rows in set (0.05 sec)
 </code></pre>
-
 <h2 id="cheat-sheet">Cheat Sheet</h2>
-
 <table>
 <thead>
 <tr>
@@ -356,38 +333,31 @@ mysql&gt; show databases;
 <th>Command Reference</th>
 </tr>
 </thead>
-
 <tbody>
 <tr>
 <td>創建新用戶</td>
 <td>CREATE USER &lsquo;user&rsquo;@&lsquo;localhost&rsquo;;</td>
 </tr>
-
 <tr>
 <td>給用戶分配權限</td>
 <td>GRANT <strong>[ALL PRIVILEGES]/[SELECT, INSERT, DELETE]</strong> ON data_basename.* TO &lsquo;username&rsquo;@&lsquo;localhost&rsquo;;</td>
 </tr>
-
 <tr>
 <td>撤銷用戶權限</td>
 <td>REVOKE <strong>[ALL PRIVILEGES(僅一項權限)]/[GRANT OPTION(所有權限)]</strong> ON data_basename.* FROM &lsquo;username&rsquo;@&lsquo;localhost&rsquo;;</td>
 </tr>
-
 <tr>
 <td>刷新privileges緩衝區</td>
 <td>FLUSH PRIVILEGES;</td>
 </tr>
-
 <tr>
 <td>創建table</td>
 <td>CREATE TABLE events( <strong>id int auto_increment primary key, event_name varchat(255), visitor varchar(255), properties json</strong> )</td>
 </tr>
-
 <tr>
 <td>插入數據</td>
-<td>INSERT INTO events(<strong>properties</strong>) VALUE (<strong>&rsquo;{&ldquo;type&rdquo;:{&lsquo;THIS IS TEST JSON&rsquo;}}&rsquo;</strong>)</td>
+<td>INSERT INTO events(<strong>properties</strong>) VALUE (<strong>'{&ldquo;type&rdquo;:{&lsquo;THIS IS TEST JSON&rsquo;}}'</strong>)</td>
 </tr>
-
 <tr>
 <td>删除表</td>
 <td>DROP TABLE events</td>
@@ -404,7 +374,8 @@ mysql&gt; show databases;
       <a href="https://hinwai.top/2020/10/mysql/" title="MySQL 筆記" target="_blank" rel="external">https://hinwai.top/2020/10/mysql/</a>
     </li>
     <li class="post-copyright-license">
-      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+      <strong>License: </strong>
+        
     </li>
   </ul>
 </blockquote>
@@ -424,11 +395,9 @@ mysql&gt; show databases;
     </figure>
   </div>
 </div>
+
     </div>
   </article>
-<section id="comments">
-</section>
-
 </div><nav class="bar bar-footer clearfix" data-stick-bottom>
     <div class="bar-inner">
         <ul class="pager pull-left">
@@ -436,6 +405,11 @@ mysql&gt; show databases;
                 <a href="https://hinwai.top/2020/10/raspberrypi/" title="折騰Raspberry Pi Zero日記"><i
                         class="icon icon-angle-left"
                         aria-hidden="true"></i><span>&nbsp;&nbsp;下一篇</span></a>
+            </li>
+            <li class="next">
+                <a href="https://hinwai.top/2021/09/utility/"
+                    title="Utility Checker"><span>上一篇&nbsp;&nbsp;</span><i
+                        class="icon icon-angle-right" aria-hidden="true"></i></a>
             </li>
             
             <li class="toggle-toc">
@@ -453,6 +427,7 @@ mysql&gt; show databases;
     </div>
 </nav>
 
+
 </main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 <ul class="social-links">
     <li><a href="https://github.com/HinWaei" target="_blank" title="github" data-toggle=tooltip data-placement=top >
@@ -463,10 +438,10 @@ mysql&gt; show databases;
             <i class="icon icon-twitter"></i></a></li>
 </ul>
   <div class="copyright">
-    &copy;
-    Hinux. Following <a href="http://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a>
+    &copy;2020  -
+    2021
     <div class="publishby">
-        Theme by <a href="https://github.com/HinWaei" target="_blank"> Hinux </a>base on <a href="https://blog.xiaohei.im/">xiaoheiAh</a>'s<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> Pure</a>.
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
     </div>
   </div>
 </footer>

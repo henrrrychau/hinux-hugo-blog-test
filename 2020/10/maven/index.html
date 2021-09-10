@@ -21,11 +21,11 @@
     
     
     <meta name="description" content="有一段时间没更blog了，之前一直都没时间写，害。。。 今天堂姐结婚，可惜学校只有四天的假期（就这？四天怎么够表达我对祖国母亲生日的激动之情啊" />
-    <meta name="generator" content="Hugo 0.57.2 with theme pure" />
+    <meta name="generator" content="Hugo 0.68.3 with theme pure" />
     <title>關於Maven的一些東西（不定期更） - Lost Space - Hinux&#39;s Blog</title>
     
     
-    <link rel="stylesheet" href="https://hinwai.top/css/style.min.96344896368df9cb930b382c93ca5a7234d7118b7754e394f15c1e929cc37e10.css">
+    <link rel="stylesheet" href="https://hinwai.top/css/style.min.7dc20efbc53647d41aa9ddea0c48e59300223d084e66ea0cbe7c30bd88903acc.css">
     
     <link rel="stylesheet" href="https://cdn.staticfile.org/highlight.js/9.15.10/styles/github.min.css" async>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css" async>
@@ -37,16 +37,13 @@
 <meta property="article:modified_time" content="2020-10-05T16:00:44+08:00" />
 <meta itemprop="name" content="關於Maven的一些東西（不定期更）">
 <meta itemprop="description" content="有一段时间没更blog了，之前一直都没时间写，害。。。 今天堂姐结婚，可惜学校只有四天的假期（就这？四天怎么够表达我对祖国母亲生日的激动之情啊">
-
-
 <meta itemprop="datePublished" content="2020-10-05T16:00:44&#43;08:00" />
 <meta itemprop="dateModified" content="2020-10-05T16:00:44&#43;08:00" />
 <meta itemprop="wordCount" content="1106">
 
 
 
-<meta itemprop="keywords" content="工具," />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="keywords" content="工具," /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="關於Maven的一些東西（不定期更）"/>
 <meta name="twitter:description" content="有一段时间没更blog了，之前一直都没时间写，害。。。 今天堂姐结婚，可惜学校只有四天的假期（就这？四天怎么够表达我对祖国母亲生日的激动之情啊"/>
 
@@ -199,6 +196,16 @@
             <li>
                 <div class="item-inner">
                     <p class="item-title">
+                        <a href="https://hinwai.top/2021/09/utility/" class="title">Utility Checker</a>
+                    </p>
+                    <p class="item-date">
+                        <time datetime="2021-09-10 11:54:37 &#43;0800 HKT" itemprop="datePublished">2021-09-10</time>
+                    </p>
+                </div>
+            </li>
+            <li>
+                <div class="item-inner">
+                    <p class="item-title">
                         <a href="https://hinwai.top/2020/10/mysql/" class="title">MySQL 筆記</a>
                     </p>
                     <p class="item-date">
@@ -233,16 +240,6 @@
                     </p>
                     <p class="item-date">
                         <time datetime="2020-10-08 16:32:30 &#43;0800 HKT" itemprop="datePublished">2020-10-08</time>
-                    </p>
-                </div>
-            </li>
-            <li>
-                <div class="item-inner">
-                    <p class="item-title">
-                        <a href="https://hinwai.top/2020/10/maven/" class="title">關於Maven的一些東西（不定期更）</a>
-                    </p>
-                    <p class="item-date">
-                        <time datetime="2020-10-05 16:00:44 &#43;0800 HKT" itemprop="datePublished">2020-10-05</time>
                     </p>
                 </div>
             </li>
@@ -289,46 +286,30 @@
     <a class="article-tag-link" href="/tags/%E5%B7%A5%E5%85%B7/"> 工具 </a>
   </span>
 
-        <span class="post-comment"><i class="icon icon-comment"></i>&nbsp;<a href="/2020/10/maven/#comments"
-            class="article-comment-link">评论</a></span>
 		<span class="post-wordcount hidden-xs" itemprop="wordCount">字数统计: 1106字</span>
 		<span class="post-readcount hidden-xs" itemprop="timeRequired">阅读时长: 3分 </span>
       </div>
     </div>
     <div class="article-entry marked-body js-toc-content" itemprop="articleBody">
-      
-
-<p><strong>有一段时间没更blog了，之前一直都没时间写，害。。。</strong></p>
-
-<p>今天堂姐结婚，可惜学校只有四天的假期（就这？四天怎么够表达我对祖国母亲生日的激动之情啊🙄），刚好周一又没有课，于是我强行<del>+1s</del>续了一波假期硬是拖到今天才回学(cun)校(li)（内心写着一万个不愿意55555555 T_T）<br />
+      <p><strong>有一段时间没更blog了，之前一直都没时间写，害。。。</strong></p>
+<p>今天堂姐结婚，可惜学校只有四天的假期（就这？四天怎么够表达我对祖国母亲生日的激动之情啊🙄），刚好周一又没有课，于是我强行<del>+1s</del>续了一波假期硬是拖到今天才回学(cun)校(li)（内心写着一万个不愿意55555555 T_T）<br>
 顺便祝堂姐百年好合早生贵子吧哈哈哈哈哈哈😀</p>
-
 <h2 id="折腾maven">折腾Maven</h2>
-
 <p>回到学校之后，换了个衣服，吃了个午饭，就开始一头扎进Maven的文档里。配置和使用的过程也并不是那么一帆风顺，这里记录一下使用中遇到的一些问题（不知道以后会不会遇到另一些奇奇怪怪的问题，这里的问题是暂时碰到的，以后不定期更新遇到的问题解决方案）</p>
-
 <h3 id="老生常谈的mirror问题">老生常谈的Mirror问题</h3>
-
 <p>装上maven之后，我在终端里输入了</p>
-
 <pre><code class="language-bash">$ cd projects/
 $ mvn archetype:generate
 </code></pre>
-
 <p>尝试通过最朴素的interactive模式来创建一个很naive的maven project，结果发现下载速度不太对劲儿，下一个4.7mb的包都下了好久，直觉告诉我应该是天朝自有国情在的问题拦住我了。</p>
-
 <p><strong>于是google了一下</strong> 看看能不能改掉镜像（PS:按照Maven里面的说法应该叫repository，平时下artifact的那个大仓库应该叫“中央仓库”central repository）</p>
-
 <p>于是搜了一下<a href="https://maven.apache.org/guides/mini/guide-mirror-settings.html">maven的官方文档</a>
-又google了一下，发现国内一般用阿里云Maven仓库（url为<a href="https://maven.aliyun.com/repository/public)">https://maven.aliyun.com/repository/public)</a><br />
+又google了一下，发现国内一般用阿里云Maven仓库（url为https://maven.aliyun.com/repository/public)<br>
 于是愉快地打开终端 输入：</p>
-
 <pre><code class="language-bash">$ cd /home/user_name/.m2/
 $ nano settings.xml #因为这个settings.xml一开始是不存在的，要自行创建
 </code></pre>
-
 <p>然后在nano里面输入</p>
-
 <pre><code>&lt;settings&gt;
     &lt;mirrors&gt;
     &lt;mirror&gt;
@@ -340,23 +321,18 @@ $ nano settings.xml #因为这个settings.xml一开始是不存在的，要自�
     &lt;/mirrors&gt;
 &lt;/settings&gt;
 </code></pre>
-
 <p>其中这里的mirrorOf默认是central，也就是说这个仓库是id为central的镜像站。如果要从id不是central的仓库中下载其他artifact则会跑到各自对应id的镜像站上下载（PS：一个mirrorOf最多对应一个id，如果出现一对多的情况则只取第一个match，其他的match则会被丢弃）</p>
-
 <h3 id="jar文件找不到main-class的问题">jar文件找不到main class的问题</h3>
-
 <p>今天写了个小hello world，结果发现编译出来的jar跑不了</p>
-
 <pre><code class="language-bash">$ maven archetype:generate
 #......(omitted)
 $ mvn package
 $ java -jar target/noobapp-1.0.jar
 no main manifest attribute, in target/noobapp-1.0.jar
 </code></pre>
-
-<p>看了一下文档，发现原来jar文件需要手动指定Main-Class入口点<br />
-于是找到了两种解决方法（假设我们的noobapp-1.0入口点包含在noobpkg这个包里面的App.java）：<br />
-<strong>1. 在Windows下以压缩包形式打开.jar，修改MANIFEST FILE，将里面Main Class:后面的内容更改称noobpkg.App</strong><br />
+<p>看了一下文档，发现原来jar文件需要手动指定Main-Class入口点<br>
+于是找到了两种解决方法（假设我们的noobapp-1.0入口点包含在noobpkg这个包里面的App.java）：<br>
+<strong>1. 在Windows下以压缩包形式打开.jar，修改MANIFEST FILE，将里面Main Class:后面的内容更改称noobpkg.App</strong><br>
 <strong>2. 直接手动指定入口点java -cp target/noobapp-1.0.jar noobpkg.App</strong></p>
 
     </div>
@@ -368,7 +344,8 @@ no main manifest attribute, in target/noobapp-1.0.jar
       <a href="https://hinwai.top/2020/10/maven/" title="關於Maven的一些東西（不定期更）" target="_blank" rel="external">https://hinwai.top/2020/10/maven/</a>
     </li>
     <li class="post-copyright-license">
-      <strong>License：</strong><a href="http://creativecommons.org/licenses/by/4.0/deed.zh" target="_blank" rel="external">CC BY 4.0 CN</a>
+      <strong>License: </strong>
+        
     </li>
   </ul>
 </blockquote>
@@ -388,11 +365,9 @@ no main manifest attribute, in target/noobapp-1.0.jar
     </figure>
   </div>
 </div>
+
     </div>
   </article>
-<section id="comments">
-</section>
-
 </div><nav class="bar bar-footer clearfix" data-stick-bottom>
     <div class="bar-inner">
         <ul class="pager pull-left">
@@ -422,6 +397,7 @@ no main manifest attribute, in target/noobapp-1.0.jar
     </div>
 </nav>
 
+
 </main><footer class="footer" itemscope itemtype="http://schema.org/WPFooter">
 <ul class="social-links">
     <li><a href="https://github.com/HinWaei" target="_blank" title="github" data-toggle=tooltip data-placement=top >
@@ -432,10 +408,10 @@ no main manifest attribute, in target/noobapp-1.0.jar
             <i class="icon icon-twitter"></i></a></li>
 </ul>
   <div class="copyright">
-    &copy;
-    Hinux. Following <a href="http://creativecommons.org/licenses/by/4.0/deed.zh">CC BY 4.0</a>
+    &copy;2020  -
+    2021
     <div class="publishby">
-        Theme by <a href="https://github.com/HinWaei" target="_blank"> Hinux </a>base on <a href="https://blog.xiaohei.im/">xiaoheiAh</a>'s<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> Pure</a>.
+        Theme by <a href="https://github.com/xiaoheiAh" target="_blank"> xiaoheiAh </a>base on<a href="https://github.com/xiaoheiAh/hugo-theme-pure" target="_blank"> pure</a>.
     </div>
   </div>
 </footer>

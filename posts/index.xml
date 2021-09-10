@@ -5,10 +5,19 @@
     <link>https://hinwai.top/posts/</link>
     <description>Recent content in Posts on Lost Space - Hinux&#39;s Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <lastBuildDate>Wed, 21 Oct 2020 16:19:34 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 10 Sep 2021 11:54:37 +0800</lastBuildDate>
     
         <atom:link href="https://hinwai.top/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Utility Checker</title>
+      <link>https://hinwai.top/2021/09/utility/</link>
+      <pubDate>Fri, 10 Sep 2021 11:54:37 +0800</pubDate>
+      
+      <guid>https://hinwai.top/2021/09/utility/</guid>
+      <description></description>
+    </item>
     
     <item>
       <title>MySQL 筆記</title>
@@ -70,7 +79,7 @@
       <pubDate>Mon, 31 Aug 2020 23:26:21 +0800</pubDate>
       
       <guid>https://hinwai.top/2020/08/docker/</guid>
-      <description>Docker是什麼 Docker中文翻译为&amp;rdquo;码头搬运工人&amp;rdquo;，是一个开源软件。 Docker容器与虚拟机类似，但二者在原理</description>
+      <description>Docker是什麼 Docker中文翻译为&amp;quot;码头搬运工人&amp;rdquo;，是一个开源软件。 Docker容器与虚拟机类似，但二者在原理上</description>
     </item>
     
     <item>
@@ -124,7 +133,7 @@
       <pubDate>Sun, 23 Aug 2020 17:12:54 +0800</pubDate>
       
       <guid>https://hinwai.top/about/</guid>
-      <description>大佬们:你用Markdown写blog像极了某kun打🏀 關於我 我叫Hinux.😃 某华南不用军训带学的学生,非计算机专业,~喜欢唱跳rap~ .</description>
+      <description>大佬们:你用Markdown写blog像极了某kun打🏀 關於我 我叫Hinux Chau.😃 某华南不用军训带学的学生,非计算机专业,喜欢唱跳ra</description>
     </item>
     
     <item>
