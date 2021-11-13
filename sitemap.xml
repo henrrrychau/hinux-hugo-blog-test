@@ -3,21 +3,14 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://hinwai.top/posts/</loc>
-    <lastmod>2021-09-10T11:54:37+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://hinwai.top/2021/09/utility/</loc>
-    <lastmod>2021-09-10T11:54:37+08:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://hinwai.top/2020/10/mysql/</loc>
+    <lastmod>2020-10-21T16:19:34+08:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://hinwai.top/posts/</loc>
     <lastmod>2020-10-21T16:19:34+08:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
